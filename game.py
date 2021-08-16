@@ -1,5 +1,5 @@
 
-from player import HumanPlayer, RandomComputerPlayer
+from player import HumanPlayer, ComputerPlayerAI
 import math
 import time
 
@@ -104,7 +104,7 @@ def play(game, x_player, o_player, print_game = True):
             # Alternate players (letters)
             letter = 'O' if letter=='X' else 'X'
 
-        time.sleep(1.0)
+        time.sleep(0.5)
 
     if print_game:
           print("It\'s a tie")
@@ -113,7 +113,7 @@ def play(game, x_player, o_player, print_game = True):
 
 if __name__ == '__main__':
     x_player = HumanPlayer('X')
-    o_player = RandomComputerPlayer('O')
+    o_player = ComputerPlayerAI('O')
     t = Tictactoe()
     play(t, x_player, o_player, print_game=True)
 
