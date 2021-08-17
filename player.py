@@ -50,7 +50,7 @@ class ComputerPlayerAI(Player):
             square = random.choice(game.available_moves())
         else:
             # square based on minimax algorithm
-            square = self.minimax(game, self.letter)
+            square = self.minimax(game, self.letter)['position']
         return square
 
     def minimax(self, ss, player):
